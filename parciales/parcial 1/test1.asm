@@ -1,8 +1,6 @@
-// Juan Manuel Young Hoyos
-// Parcial 1
-
+//
 @resu
-M=0 // X
+M=0
 @0
 D=M
 @base
@@ -75,14 +73,7 @@ M=0
 D=M
 M=0
 @1
-M=D // Square root of X
-
-@2 // X - 3
-D=D-1
-D=D-1
-D=D-1
 M=D
-
  
 (END)
 @END
