@@ -1,89 +1,115 @@
 // Juan Manuel Young Hoyos
 // Parcial 1
 
-@resu
+@reset
 M=0 // X
+
 @0
 D=M
+
 @base
 M=D
-@cont
+
+@counter
 M=1
-@aux
+
+@auxiliary
 M=0
-@temp
+
+@temporary
 M=0
  
-//Comienzo
-//Caso en el que la raiz sea 0
+// Case 0:
+// This is when the root is 0
 @base
 D=M-1
-@RESULTADO
+@RESULT
 D;JLT
  
-//Resto casos
+// Case !0:
+// This is when the root is not 0
 (LOOP)
-@cont
+@counter
 D=M
-@aux
+@auxiliary
 M=D
-@temp
+@temporary
 M=0
  
-(LOOPA)
-@cont
+(LOOP2)
+@counter
 D=M
-@temp
+
+@temporary
 M=D+M
-@aux
+
+@auxiliary
 M=M-1
 D=M
-@LOOPA
+
+@LOOP2
 D;JGT
  
-@temp
+@temporary
 D=M
+
 @base
 D=D-M
+
 @NA
 D;JGT
-@cont
+
+@counter
 D=M
-@resu
+
+@reset
 M=D
 (NA)
  
-@cont
+@counter
 M=M+1
-@temp
+
+@temporary
 D=M
+
 @base
 D=M-D
+
 @LOOP
 D;JGT
  
-(RESULTADO)
-@temp
+(RESULT)
+@temporary
 M=0
-@aux
+
+@auxiliary
 M=0
-@cont
+
+@counter
 M=0
+
 @base
 M=0
-@resu
+
+@reset
 D=M
 M=0
-@1
-M=D // Square root of X
 
-@2 // X - 3
+// Over here is stored:
+// Square root of X
+@1
+M=D
+
+// Over here is stored:
+// Square root of X minus 3
+@2
 D=D-1
 D=D-1
 D=D-1
 M=D
 
- 
 (END)
 @END
+// To avoid malicious code, you could terminate your
+// program with an infinite loop.
 0;JMP
